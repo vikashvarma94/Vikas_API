@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
@@ -21,7 +19,6 @@ public class jsonbody_input {
     FileInputStream fis = new FileInputStream("C:\\Users\\SANJEEV\\eclipse-workspace\\Vikas_API\\src\\Test data\\API data.xlsx");
     XSSFWorkbook wb = new XSSFWorkbook(fis);
     XSSFSheet sh = wb.getSheetAt(1);
-    
     
   //  Object[][] d = new Object[sh.getLastRowNum()][2];
     Object[][] d = new Object[4][5];

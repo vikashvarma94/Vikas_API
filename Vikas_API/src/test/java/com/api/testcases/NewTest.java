@@ -11,23 +11,23 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 
 
-public class tc2_post extends baseclass {
+public class NewTest extends baseclass {
 	
-  @Test(dataProvider ="put", dataProviderClass = jsonbody_input.class)
+  @Test//(dataProvider ="put", dataProviderClass = jsonbody_input.class)
   
-  public void b(String endpoint,String req, String id, String email, String name) {
-	  RestAssured.baseURI = endpoint;
+  public void b() {
+	  RestAssured.baseURI = "https://reqres.in/api";
 	  httpreq = RestAssured.given();
 	  
 	  JSONObject jsonparm = new JSONObject();
-	  jsonparm.put("id",id );
-	  jsonparm.put("email",email);
-	  jsonparm.put("first_name",name);
+	  jsonparm.put("id","9" );
+	  jsonparm.put("email","test@gmail.com");
+	  jsonparm.put("first_name","vikas");
 	  
 	  httpreq.header("Context-Type","application/json");
 	  httpreq.body(jsonparm.toString());
 	  
-	  resp = httpreq.request(Method.POST,req);
+	  resp = httpreq.request(Method.POST,"/users");
 //  }
 //
 //@Test
