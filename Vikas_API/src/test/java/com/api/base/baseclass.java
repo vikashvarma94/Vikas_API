@@ -11,13 +11,11 @@ import io.restassured.response.Response;
 	import io.restassured.specification.RequestSpecification;
 		
 	public class baseclass {
+		
 		public static RequestSpecification httpreq;
 		public static Response resp;
-		public String id="1";
-
-		
+		public String id="1";	
 		public Logger logger;
-		
 		
 		@BeforeClass
 		public void setUp() {

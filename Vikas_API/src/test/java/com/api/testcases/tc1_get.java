@@ -1,35 +1,35 @@
 package com.api.testcases;
 
 
-import static org.testng.Assert.assertEquals;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.api.base.baseclass;
+import com.api.dataprovider.data;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class tc1_get extends baseclass{
+public class tc1_get extends baseclass{	
 	
 	
-	
-	@Test//(dataProvider = "api")
-	  public void b() throws InterruptedException {
+	@Test(dataProvider = "input", dataProviderClass = data.class)
+	  public void b(String endpoint,String req) throws InterruptedException {
 		  
-		  RestAssured.baseURI = "https://reqres.in/api/users";
+		  RestAssured.baseURI = endpoint;
 		  httpreq = RestAssured.given();
-		  resp = httpreq.request(Method.GET);
+		  resp = httpreq.request(Method.GET,req);
 		  Thread.sleep(1000);
 	  }
-@Test
-  public void f() {
+@Test(dataProvider = "output", dataProviderClass = data.class)
+  public void f(String code, String Line) {
 	  System.out.println(resp.getStatusLine());
 	  System.out.println(resp.getStatusCode());
 	  
-	  assert.assertEquals(resp.getStatusLine(),"");
-	  assert.assertEquals(resp.getStatusCode(),"200");
+	  Assert.assertEquals(resp.getStatusLine(),Line);
+	  Assert.assertEquals(resp.getStatusCode(),code);
   }
 }
