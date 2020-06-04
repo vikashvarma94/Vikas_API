@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      
+       <class name="com.api.testcases.tc1_get"/>
+      <class name="com.api.testcases.tc2_post"/>
+      <class name="com.api.testcases.tc3_put"/>
+     <class name="com.api.testcases.tc4_delete"/>
+      
+      <class name="com.api.bdd.bdd_GET"/>
+      <class name="com.api.bdd.bdd_POST"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

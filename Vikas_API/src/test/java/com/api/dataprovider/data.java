@@ -24,9 +24,9 @@ public class data {
     
     
   //  Object[][] d = new Object[sh.getLastRowNum()][2];
-    Object[][] d = new Object[1][2];
+    Object[][] d = new Object[2][2];
     
-    for(int i =2;i<=2;i++) {
+    for(int i =2;i<=3;i++) {
     	  for(int j =4;j<=5;j++) {
     		  
     		  d[i-2][j-4] = sh.getRow(i).getCell(j).getStringCellValue();
@@ -46,9 +46,9 @@ public class data {
     
     
   //  Object[][] d = new Object[sh.getLastRowNum()][2];
-    Object[][] d = new Object[1][2];
+    Object[][] d = new Object[2][2];
     
-    for(int i =2;i<=2;i++) {
+    for(int i =2;i<=3;i++) {
     	  for(int j =6;j<=7;j++) {
     		  
     		  d[i-2][j-6] = sh.getRow(i).getCell(j).getStringCellValue();

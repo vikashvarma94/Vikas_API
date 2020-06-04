@@ -28,10 +28,10 @@ public class tc2_post extends baseclass {
 	  httpreq.body(jsonparm.toString());
 	  
 	  resp = httpreq.request(Method.POST,req);
-//  }
-//
-//@Test
-//public void g() {
+ }
+
+@Test
+public void g() {
 	System.out.println(resp.getStatusCode());
   }
 	
