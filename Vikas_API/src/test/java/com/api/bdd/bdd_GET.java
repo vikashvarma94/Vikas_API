@@ -31,4 +31,5 @@ public class bdd_GET {
 		.statusCode(200)
 		.statusLine(Line)
 		.log().all();
+		
 }}
