@@ -20,8 +20,6 @@ public class bdd_POST {
 	  
 	  public void b(String endpoint,String req, String id, String email, String name) {
 		  
-		  
-		 
 		  map.put("id",id );
 		  map.put("email",email);
 		  map.put("first_name",name);
@@ -36,7 +34,6 @@ public class bdd_POST {
 		  .when()
 		  	.post()
 		  .then()
-		  	.statusCode(201);
-	  
+		  	.statusCode(201);  
 	 }
 }

@@ -23,7 +23,8 @@ public class bdd_GET {
 		  	.when().get(endpoint+""+req)
 		  	.then().statusCode(200);
 	}
-	@Test(dataProvider = "output", dataProviderClass = data.class)
+	
+	@Test(dataProvider = "output", dataProviderClass =data.class)
 	  public void f(String code, String Line) {	
 		
 		given(). when().then()
